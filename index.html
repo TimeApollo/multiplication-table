@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        .cell {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            border: .1em solid grey;
+        }
+
+        .values {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .centered {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .header {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplication Table</h1>
+    <script>
+        var row = prompt("Enter first number of table");
+        var col = prompt("Enter second number of table")
+        // output the header row
+        document.write('<span class="cell header"><span class="centered"></span><span class="values">X</span></span>');
+        for (i = 0; i <= row; i++) {
+            document.write('<span class="cell header"><span class="centered"></span><span class="values">' + i +
+                '</span></span>');
+        }
+        document.write('<br>');
+
+        // TODO: Write two nested for loops to output the rest of the multiplication table
+        for (var x = 0; x <= col; x++) {
+            document.write('<span class="cell header"><span class="centered"></span><span class="values">' + x +
+                '</span></span>');
+            for (var y = 0; y <= row; y++) {
+                document.write('<span class="cell"><span class="centered"></span><span class="values">' + (x * y) +
+                    '</span></span>');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>
